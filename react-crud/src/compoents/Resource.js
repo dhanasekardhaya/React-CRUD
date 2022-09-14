@@ -30,7 +30,7 @@ export const Resource = (props) => {
       || !user.course || !user.address) {
       alert("Please Fill the all Data");
     }
-    else if (user.mobileNumber.length < 10) {
+    else if (user.mobileNumber.length >= 10) {
       alert("Invalid Number")
     }
     else {

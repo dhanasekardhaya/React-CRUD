@@ -30,7 +30,7 @@ export const Resource = (props) => {
       || !user.course || !user.address) {
       alert("Please Fill the all Data");
     }
-    else if (user.mobileNumber.length >= 10) {
+    else if (user.mobileNumber.length < 10) {
       alert("Invalid Number")
     }
     else {
@@ -84,9 +84,9 @@ export const Resource = (props) => {
             <label for="exampleFormControlInput1" class="form-label">Course</label>
             <select className="form-control" onChange={handleEvent} name="course"
               value={user.course}>
-              <option value="cse">CSE</option>
-              <option value="mech">MECH</option>
-              <option>IT</option>
+              <option value="CSE">CSE</option>
+              <option value="MECH">MECH</option>
+              <option value="IT">IT</option>
             </select>
           </div>
           <div class="mb-3">

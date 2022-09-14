@@ -12,7 +12,18 @@ export const EditTable = (props) => {
 
   const submitValue = (event) => {
     event.preventDefault();
-    props.updateUser(user.id, user);
+    if (!user.studentName || !user.email || !user.mobileNumber || !user.dob
+      || !user.course || !user.address) {
+      alert("Please Fill the all Data");
+    }
+    else if (user.mobileNumber.length < 10) {
+      alert("Invalid Number")
+    }
+    else{
+      props.updateUser(user.id, user);
+
+    }
+    
 
   }
 
